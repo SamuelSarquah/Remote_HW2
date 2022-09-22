@@ -1,0 +1,74 @@
+---
+title: "HW2"
+author: "Samuel Sarquah"
+date: "2022-09-21"
+output: 
+  html_document: 
+    keep_md: yes
+---
+*Part 2. Analyze Cleaned Data*
+*Use the cleaned data to answer the following questions in your report (and explain how you arrived at the answers):*
+The GitHub URL for the data din't work so i used the google doc link.
+the clean up started with the "what kind(type) of pet" column, I used the "key collision" method and "fingerprint" keying functions to clean up some of the names. from there I used the  "text facet" to filter for other spelling issues, this was all manual relying on the whole row to make detrminations in some instances, for example there pet type of "other but the breed will say cat or dog so I was able to update those.
+There were 2 blank types but  filtering for the blank and reviewing the breed provided what I needed to populate the data.
+There was 1 row with multiple pet types so I used the split function but it only split the "type" column so I had to clean the other column by spliting those individually for this row.
+I used the GREL and used the replace function to clean unwanted characters from the age column. for the age column based the part 2 question I was not comfortable making any other changes.
+Finally, cleaned up the "breed" column using clusters and text facet to manually filter and make corrections. there wre a lot of breeds that I believe could be grouped further but based on part 2 I wanted to maintain the granularity of the data.
+
+*How many types (kinds) of pets are there?*
+ There are 35 kinds including Roomba,Robot,poster,car,ca, and server.
+ if you exclude Roomba,Robot,poster,car,ca, and server there are 29kind(types) of pets.
+ 
+*How many dogs?*
+ There were 1132 dogs including desceased.
+ 
+*How many breeds of dogs?*
+399 breeds while there could be further consolidation of breeds this number gives give a little more granularity.
+
+*What's the most popular dog breed?*
+The most popular dog breed is Golden Retriever.
+
+*What's the age range of the dogs?*
+The age range of dogs is 6weeks to 22years.
+
+*What's the age range of the guinea pigs?*
+Guinea pig age range is 1 to 5 years.
+
+*What is the oldest pet?*
+The oldest pet is a Dog(22years)
+
+*Which are more popular, betta fish or goldfish? How many of each?*
+Gold fish is popular with 7 compared with the 3 Betta fish
+
+*What's the most popular everyday name for a cat?*
+The most popular everyday name for a cat is "kitty".
+
+*What's the most popular full name for a dog?*
+The most popular full names for a dog are Maggie(7) and Sadie(7).
+
+*Every report must list the references that you consulted while completing the assignment. If you consulted a webpage, you must include the URL.*
+* Insert Reference 1, https://canvas.odu.edu/courses/125570/external_tools/39
+* Insert Reference 2, https://docs.openrefine.org
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
