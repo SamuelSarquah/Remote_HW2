@@ -6,14 +6,16 @@ output:
   html_document: 
     keep_md: yes
 ---
-*Part 2. Analyze Cleaned Data*
-*Use the cleaned data to answer the following questions in your report (and explain how you arrived at the answers):*
+### Part 1. Data Cleaning
+
 The GitHub URL for the data din't work so i used the google doc link.
 the clean up started with the "what kind(type) of pet" column, I used the "key collision" method and "fingerprint" keying functions to clean up some of the names. from there I used the  "text facet" to filter for other spelling issues, this was all manual relying on the whole row to make detrminations in some instances, for example there pet type of "other but the breed will say cat or dog so I was able to update those.
 There were 2 blank types but  filtering for the blank and reviewing the breed provided what I needed to populate the data.
 There was 1 row with multiple pet types so I used the split function but it only split the "type" column so I had to clean the other column by spliting those individually for this row.
 I used the GREL and used the replace function to clean unwanted characters from the age column. for the age column based the part 2 question I was not comfortable making any other changes.
-Finally, cleaned up the "breed" column using clusters and text facet to manually filter and make corrections. there wre a lot of breeds that I believe could be grouped further but based on part 2 I wanted to maintain the granularity of the data.
+Finally, cleaned up the "breed" column using clusters and text facet to manually filter and make corrections. there wre a lot of breeds that I believe could be grouped further but based on part 2 I wanted to maintain the granularity of the data. The steps I took are in the HW2-petnames.json file.
+
+### Part 2. Analyze Cleaned Data
 
 *How many types (kinds) of pets are there?*
  There are 35 kinds including Roomba,Robot,poster,car,ca, and server.
